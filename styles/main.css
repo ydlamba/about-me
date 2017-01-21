@@ -1,0 +1,96 @@
+/*remove browsers default margin and padding*/	
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* external font added*/
+@font-face {
+  font-family: 'myraid';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+       url('../fonts/MyriadPro-Regular.woff') format('woff'),
+       url('../fonts/MyriadPro-Regular.ttf') format('truetype'),
+       url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
+       url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+main{
+	width: 50vw;
+	height: 600px;
+	margin-top: 3%;
+	background: rgba(0,0,0,0.3);
+	//border: 2px solid green;
+}
+
+nav{
+	width: 40vw;
+	height: 150px;
+	margin: auto;
+	//border: 2px solid #fff;
+}
+
+.myNav{
+	margin:8% 0 0 10%;
+	transform: all 0.5s ease;
+	//border: 2px solid pink;
+}
+.myNav button{
+	background: transparent;
+	padding: 10px 20px;
+}
+.myNav a{
+	color:#fff;
+	font-family: 'myraid';
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/*.verticalLine{
+	width: 50px;
+	color: #fff;
+	transform: rotate(90deg);
+}*/
+
+section{
+	width: 50vw;
+	height: 250px;
+	//border: 2px solid white;
+}
+
+.mpart{
+	width: 70%;
+	margin: auto;
+	color: #fff;
+	font-family: 'myraid';
+	text-align: center;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.mpart h1{
+	font-size: 64px;
+}
+
+.mpart h4{
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.mpart small{
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+.nox{
+	color:#de1b1b;
+}
