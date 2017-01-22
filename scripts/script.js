@@ -17,23 +17,23 @@ $contact.click(function(){
 $(".cross").click(function(){
 
 	$("main").fadeIn(500)
-	$(".contact,.skills,.interests,.education").hide();
+	$(".contact,.about,.interests,.work").hide();
 	$(".backImg").css("transform","scale(1.3)");
 	$(".backImg").css("filter","blur(0px)");
 	});
 
-$(".ski").click(function(){
+$(".abt").click(function(){
 	change();
-	$(".skills").fadeIn(500);
+	$(".about").fadeIn(500);
 });
 $(".inte").click(function(){
 	change();
 	$(".interests").fadeIn(500);
 });
 
-$(".edu").click(function(){
+$(".wor").click(function(){
 	change();
-	$(".education").fadeIn(500);
+	$(".work").fadeIn(500);
 });
 
 
