@@ -25,11 +25,14 @@ body{
 
 .backImg{
 	position: fixed;
+	z-index: -2;
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../images/background.jpg) no-repeat;
+	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../images/background2.jpg) no-repeat;
 	background-size: cover;
-	transform: scale(1.3);
+	background-attachment: fixed;
+	//background: #393939;
+	transform: scale(2);
 	transition: all 0.5s ease;
 }
 
@@ -37,23 +40,32 @@ main{
 	position: fixed;
 	z-index:9999;
 	width: 50vw;
-	height: 600px;
-	left: 0;
-	right: 0;
+	left: 25vw;
 	top: 7%;
+	transition: all 0.5s ease;
+}
+
+.mainback{
 	background: rgba(0,0,0,0.3);
-	//border: 2px solid green;
+}
+
+.mainonclick{
+	transform: scale(0.9);
+	opacity: 0.1;
+	z-index: -1;
 }
 
 nav{
+	opacity: 0;
 	width: 40vw;
 	height: 150px;
 	margin: auto;
 	//border: 2px solid #fff;
+	transition: all 0.5s ease;
 }
 
 .myNav{
-	margin:8% 0 0 5%;
+	margin:8% 0 0 9%;
 	transform: all 0.5s ease;
 	//border: 2px solid pink;
 }
@@ -75,6 +87,10 @@ nav{
 	text-decoration: none;
 }
 
+.myNav a:active{
+	color: #fff;
+	text-decoration: none;
+}
 .myNav button:hover{
 	background:rgba(255,255,255,0.2);
 }
@@ -91,28 +107,53 @@ main>section{
 }
 
 .mpart{
+	opacity: 0;
 	width: 70%;
 	margin: auto;
 	color: #fff;
 	font-family: 'myraid';
 	text-align: center;
+	transition: all 0.5s ease;
+}
+/*.mborder{
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
-}
+}*/
+
 .mpart h1{
+	opacity: 0;
 	font-size: 64px;
+	transition: all 0.5s ease;
 }
 
 .mpart h4{
+	opacity: 0;
+	font-size: 20px;
+	overflow:hidden;
+	white-space: nowrap;
+	letter-spacing: 2px;
+	transition: all 0.8s ease;
+	//animation: autotype 8s steps(14, end);
+}
+.mpart p{
+	opacity: 0;
 	font-size: 20px;
 	letter-spacing: 2px;
+	transition: all 0.8s ease;
+	padding-bottom: 40px;
 }
-
 .mpart small{
+	opacity: 0;
 	letter-spacing: 3px;
 	font-size: 20px;
+	transition: all 0.8s ease;
 }
-
+.mpart hr{
+	opacity: 0;
+	animation: increasehr 2s ease;
+	animation-delay: 5.5s;
+	transition: all 0.5s ease;
+}
 .nox{
 	display: inline;
 	color:#de1b1b;
@@ -124,6 +165,7 @@ body>section{
 	right: 0;
 	top: 7%;
 	display: none;
+	overflow-x: hidden;
 	width: 50vw;
 	word-wrap: break-word;
 	height: 600px;
@@ -131,21 +173,20 @@ body>section{
 	font-family: 'myraid';
 	letter-spacing: 2px;
 	margin: 0 auto;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.3);
 	transition: transform 0.5s ease;
 }
 
 .cross{
-	position: relative;
+	position: fixed;
 	float: right;
 	width: 20px;
 	height: 20px;
-	top:15px;
-	right: 15px;
+	top: 2%;
+	right: 2%;
 	cursor: pointer;
 }
 .contact{
-
 }
 
 body>section>h2{
@@ -153,10 +194,10 @@ body>section>h2{
 	font-variant: small-caps;
 }
 
-.contact>p{
+body>section>p{
 	color: #999;
 	font-size: 20px;
-	padding: 20px;
+	padding: 35px;
 }
 
 .social{
@@ -164,10 +205,63 @@ body>section>h2{
 	height: 48px;
 }
 footer{
+	opacity: 0;
 	text-align: center;
 	color: #67bcdb;
 	font-size: 20px;
 	font-family: 'myraid';
 	letter-spacing: 2px;
 	padding: 80px;
+	transition: all 0.5s ease;
+}
+
+.hobimg{
+	width: 220px;
+	height: 200px;
+}
+.interests .row{
+	height: 200px;
+	width: 60vw;
+	overflow-y: scroll;
+}
+/*scrollbars styling*/
+body>section::-webkit-scrollbar {
+    width: 1.5%;
+}
+ 
+body>section::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body>section::-webkit-scrollbar-thumb {
+  background-color: #777;
+  outline: 1px solid #333;
+}
+
+/* keyframe animation 
+@keyframes starting{
+	0%{
+		di
+	}
+}*/
+
+/*@keyframes autotype {
+	0%{
+		width: 0;
+	}
+	50%{
+		width: 0;
+	}
+	100%{
+		width: 50%;
+	}
+}*/
+
+@keyframes increasehr {
+	from{
+		width: 0;
+	}
+	to{
+		width: 100%;
+	}
 }
