@@ -19,7 +19,7 @@
 
 body{
 	width: 100vw;
-	height: 600px;
+	height: 46vw;
 	overflow-x: hidden;
 }
 
@@ -39,6 +39,7 @@ main{
 	position: fixed;
 	z-index:9999;
 	width: 50vw;
+	height: 46vw;
 	left: 25vw;
 	top: 7%;
 	transition: all 0.5s ease;
@@ -57,27 +58,25 @@ main{
 nav{
 	opacity: 0;
 	width: 40vw;
-	height: 150px;
+	height: 11.5vw;
 	margin: auto;
-	//border: 2px solid #fff;
 	transition: all 0.5s ease;
 }
 
 .myNav{
-	margin:8% 0 0 9%;
+	margin:4vw 0 0 5vw;
 	transform: all 0.5s ease;
-	//border: 2px solid pink;
 }
 .myNav button{
 	background: transparent;
-	padding: 10px 18px;
+	padding: 0.76vw 1,38vw;
 	transition: all 0.2s ease;
 }
 .myNav a{
 	color:#fff;
 	font-family: 'Quicksand', sans-serif;
 	letter-spacing: 1px;
-	font-size: 20px;
+	font-size: 1.53vw;
 	text-decoration: none;
 }
 
@@ -97,8 +96,7 @@ nav{
 
 main>section{
 	width: 50vw;
-	height: 250px;
-	//border: 2px solid white;
+	height: 19.15vw;
 }
 
 .mpart{
@@ -117,27 +115,27 @@ main>section{
 
 .mpart h1{
 	opacity: 0;
-	font-size: 64px;
+	font-size: 4.9vw;
 	transition: all 0.5s ease;
 }
 
 .mpart h4{
 	opacity: 0;
-	font-size: 20px;
+	font-size: 1.53vw;
 	letter-spacing: 2px;
 	transition: all 0.8s ease;
 }
 .mpart p{
 	opacity: 0;
-	font-size: 20px;
+	font-size: 1.53vw;
 	letter-spacing: 2px;
 	transition: all 0.8s ease;
-	padding-bottom: 40px;
+	padding-bottom: 3.06vw;
 }
 .mpart small{
 	opacity: 0;
 	letter-spacing: 3px;
-	font-size: 20px;
+	font-size: 1.53vw;
 	transition: all 0.8s ease;
 }
 .mpart hr{
@@ -161,10 +159,10 @@ footer{
 	opacity: 0;
 	text-align: center;
 	color: #3b5998;
-	font-size: 20px;
+	font-size: 1.53vw;
 	font-family: 'myraid';
 	letter-spacing: 2px;
-	padding: 80px;
+	padding: 6.13vw;
 	transition: all 0.5s ease;
 }
 
@@ -179,7 +177,7 @@ body>section{
 	overflow-x: hidden;
 	width: 50vw;
 	word-wrap: break-word;
-	height: 600px;
+	height: 46vw;
 	color: #fff;
 	font-family: 'myraid';
 	letter-spacing: 2px;
@@ -195,15 +193,15 @@ body>section>h2{
 
 body>section>p{
 	color: #999;
-	font-size: 20px;
-	padding: 35px;
+	font-size: 1.53vw;
+	padding: 2.68vw;
 }
 
 .cross{
 	position: fixed;
 	float: right;
-	width: 20px;
-	height: 20px;
+	width: 1.53vw;
+	height: 1.53vw;
 	top: 2%;
 	right: 2%;
 	cursor: pointer;
@@ -215,8 +213,8 @@ body>section>p{
 
 
 .social{
-	width: 48px;
-	height: 48px;
+	width: 3.68vw;
+	height: 3.68vw;
 }
 .social:hover{
 
@@ -224,9 +222,9 @@ body>section>p{
 
 /*interests*/
 .hobimg{
-	width: 220px;
-	height: 250px;
-	padding: 20px 0;
+	width: 16.85vw;
+	height: 19.15vw;
+	padding: 1.53vw 0;
 	filter: grayscale(100%);
 	transition: filter 0.5s ease;
 }
@@ -234,29 +232,23 @@ body>section>p{
 	filter: grayscale(0);
 }
 .hobdiv{
-	height: 270px;
+	height: 20.69vw;
 	width: 50vw;
 	white-space: nowrap;
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
-.interests li{
-	font-size: 20px;
-	padding: 20px;
+.work li,.interests li{
+	font-size: 1.53vw;
+	padding: 1.53vw;
 }
-/*work*/
-.work li{
-	font-size: 20px;
-	padding: 20px;
-}
-
 
 /*scrollbars styling*/
 body>section::-webkit-scrollbar{
     width: 1.5%;
 }
 .hobdiv::-webkit-scrollbar {
-	height: 10px;
+	height: 0.766vw;
 }
 body>section::-webkit-scrollbar-track,.hobdiv::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
