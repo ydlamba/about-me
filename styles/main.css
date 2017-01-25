@@ -31,7 +31,6 @@ body{
 	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(../images/background2.jpg) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	//background: #393939;
 	transform: scale(2);
 	transition: all 0.5s ease;
 }
@@ -94,11 +93,7 @@ nav{
 .myNav button:hover{
 	background:rgba(255,255,255,0.2);
 }
-/*.verticalLine{
-	width: 50px;
-	color: #fff;
-	transform: rotate(90deg);
-}*/
+
 
 main>section{
 	width: 50vw;
@@ -129,11 +124,8 @@ main>section{
 .mpart h4{
 	opacity: 0;
 	font-size: 20px;
-	overflow:hidden;
-	white-space: nowrap;
 	letter-spacing: 2px;
 	transition: all 0.8s ease;
-	//animation: autotype 8s steps(14, end);
 }
 .mpart p{
 	opacity: 0;
@@ -155,9 +147,28 @@ main>section{
 	transition: all 0.5s ease;
 }
 .nox{
-	display: inline;
 	color:#de1b1b;
+	/*white-space: nowrap;
+	overflow: hidden;
+	width: 8em;
+	animation: autotype 4s steps(8, end);
+	animation-delay: 5s;*/
 }
+.bnox{
+	color: #3b5998;
+}
+footer{
+	opacity: 0;
+	text-align: center;
+	color: #3b5998;
+	font-size: 20px;
+	font-family: 'myraid';
+	letter-spacing: 2px;
+	padding: 80px;
+	transition: all 0.5s ease;
+}
+
+/* styling of other tabs*/
 
 body>section{
 	position: fixed;
@@ -177,18 +188,6 @@ body>section{
 	transition: transform 0.5s ease;
 }
 
-.cross{
-	position: fixed;
-	float: right;
-	width: 20px;
-	height: 20px;
-	top: 2%;
-	right: 2%;
-	cursor: pointer;
-}
-.contact{
-}
-
 body>section>h2{
 	text-align: center;
 	font-variant: small-caps;
@@ -200,21 +199,27 @@ body>section>p{
 	padding: 35px;
 }
 
+.cross{
+	position: fixed;
+	float: right;
+	width: 20px;
+	height: 20px;
+	top: 2%;
+	right: 2%;
+	cursor: pointer;
+}
+
+/*contact*/
+.contact{
+}
+
+
 .social{
 	width: 48px;
 	height: 48px;
 }
-footer{
-	opacity: 0;
-	text-align: center;
-	color: #67bcdb;
-	font-size: 20px;
-	font-family: 'myraid';
-	letter-spacing: 2px;
-	padding: 80px;
-	transition: all 0.5s ease;
-}
 
+/*interests*/
 .hobimg{
 	width: 220px;
 	height: 200px;
@@ -224,6 +229,13 @@ footer{
 	width: 60vw;
 	overflow-y: scroll;
 }
+
+/*work*/
+.work li{
+	font-size: 20px;
+	padding: 20px;
+}
+
 /*scrollbars styling*/
 body>section::-webkit-scrollbar {
     width: 1.5%;
@@ -238,25 +250,20 @@ body>section::-webkit-scrollbar-thumb {
   outline: 1px solid #333;
 }
 
-/* keyframe animation 
-@keyframes starting{
+/* keyframe css animation */
+
+/*@keyframes starting{
 	0%{
 		di
 	}
 }*/
-
-/*@keyframes autotype {
-	0%{
+/*
+@keyframes autotype {
+	from{
 		width: 0;
 	}
-	50%{
-		width: 0;
-	}
-	100%{
-		width: 50%;
-	}
-}*/
-
+}
+*/
 @keyframes increasehr {
 	from{
 		width: 0;
