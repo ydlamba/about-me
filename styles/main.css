@@ -188,10 +188,8 @@ body>section>p{
 	font-size: 1.53vw;
 	padding: 2.68vw;
 }
-
 .cross{
 	position: fixed;
-	float: right;
 	width: 1.53vw;
 	height: 1.53vw;
 	top: 2%;
@@ -209,9 +207,13 @@ body>section>p{
 	height: 3.68vw;
 }
 .social:hover{
-
+	
 }
 
+.socialRow{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
 /*interests*/
 .hobimg{
 	width: 16.85vw;
