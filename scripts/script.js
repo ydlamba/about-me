@@ -43,6 +43,7 @@ $(document).ready(function(){
 		$interests.css("transform","scale(5)");
 		$interests.fadeIn(500);
 		$interests.css("transform","scale(1)");
+		history.pushState(null,null,"interests");
 	});
 
 	$(".wor").click(function(){
@@ -106,19 +107,22 @@ $(document).ready(function(){
 	$("#hob0").click(function(){
 		infoAni();
 		loadDoc(0);
-		history.replaceState(data,null,hacking.html);
+		history.pushState(null,null,"hacking");
 	});
 	$("#hob1").click(function(){
 		infoAni();
 		loadDoc(1);
+		history.pushState(null,null,"dance");
 	});	
 	$("#hob2").click(function(){
 		infoAni();
 		loadDoc(2);
+		history.pushState(null,null,"basketball");
 	});
 	$("#hob3").click(function(){
 		infoAni();
 		loadDoc(3);
+		history.pushState(null,null,"judo");
 	});
 /*info interests animation*/
 	function infoAni(){
