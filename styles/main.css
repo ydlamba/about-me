@@ -215,6 +215,11 @@ body>section>p{
 	margin-right: 0 !important;
 }
 /*interests*/
+.interests>span{
+	display: block;
+	text-align: center;
+	font-size: 16px;
+}
 .hobimg{
 	width: 16.85vw;
 	height: 19.15vw;
@@ -234,6 +239,7 @@ body>section>p{
 }
 .int_info{
 	color: #999;
+	display: none;
 	background: rgba(0,0,0,0.5);
 	padding: 1.53vw;
 	transition: all 0.3s ease;

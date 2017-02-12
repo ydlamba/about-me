@@ -126,6 +126,7 @@ $(document).ready(function(){
 	});
 /*info interests animation*/
 	function infoAni(){
+		$(".int_info").fadeIn(200);
 		$(".int_info").animate({height:"auto"},200);
 	}	
 });
