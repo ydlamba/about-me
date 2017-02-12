@@ -233,8 +233,17 @@ body>section>p{
 	overflow-y: hidden;
 }
 .int_info{
-	border: 2px solid green;
-	height: 200px;
+	color: #999;
+	background: rgba(0,0,0,0.5);
+	padding: 1.53vw;
+	transition: height 0.3s ease;
+	margin-top: 1.53vw;
+}
+.int_info p{
+	font-size: 16px;
+}
+.int_info h3{
+	font-weight: 600;
 }
 .work li,.interests li{
 	font-size: 1.53vw;

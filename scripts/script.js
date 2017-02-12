@@ -81,6 +81,8 @@ $(document).ready(function(){
 			},1000)
 		},1500);
 	},1000);
+
+
 /*ajax requests*/
 	function loadDoc(i){
 		var xhttp = new XMLHttpRequest();
@@ -99,22 +101,9 @@ $(document).ready(function(){
 				
 		document.getElementsByClassName("int_info")[0].innerHTML = info;
 	}
-/*
-	$(".hobdiv").click(function(){
-		var p = $(".hobdiv").index();
-		console.log(p);
-		if(p == 0){
-			loadDoc(0);
-		}else if(p == 1){
-			loadDoc(1);
-		}else if(p == 2){
-			loadDoc(2);
-		}else{
-			loadDoc(3);
-		}
-	});
-*/
+
 	$("#hob0").click(function(){
+		infoAni();
 		loadDoc(0);
 	});
 	$("#hob1").click(function(){
@@ -125,5 +114,10 @@ $(document).ready(function(){
 	});
 	$("#hob3").click(function(){
 		loadDoc(3);
-	});			
+	});
+/*info interests animation*/
+	function infoAni(){
+		$(".info_info").css("height","200px");
+	}	
+
 });
