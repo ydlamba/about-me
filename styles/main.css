@@ -232,6 +232,10 @@ body>section>p{
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
+.int_info{
+	border: 2px solid green;
+	height: 200px;
+}
 .work li,.interests li{
 	font-size: 1.53vw;
 	padding: 1.53vw;

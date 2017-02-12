@@ -81,6 +81,49 @@ $(document).ready(function(){
 			},1000)
 		},1500);
 	},1000);
-
-
+/*ajax requests*/
+	function loadDoc(i){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 && this.status == 200){
+				infoInt(this,i);
+			}
+		};
+		xhttp.open("GET","infoInt.xml",true);
+		xhttp.send();
+	}
+	function infoInt(xml,i){
+		var xmlDoc = xml.responseXML;
+		var x = xmlDoc.getElementsByTagName("INTEREST");
+		var info = "<h3>"+x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue+"</h3>"+"<p>"+x[1].getElementsByTagName("INFO")[0].childNodes[0].nodeValue+"</p>";
+				
+		document.getElementsByClassName("int_info")[0].innerHTML = info;
+	}
+/*
+	$(".hobdiv").click(function(){
+		var p = $(".hobdiv").index();
+		console.log(p);
+		if(p == 0){
+			loadDoc(0);
+		}else if(p == 1){
+			loadDoc(1);
+		}else if(p == 2){
+			loadDoc(2);
+		}else{
+			loadDoc(3);
+		}
+	});
+*/
+	$("#hob0").click(function(){
+		loadDoc(0);
+	});
+	$("#hob1").click(function(){
+		loadDoc(1);
+	});	
+	$("#hob2").click(function(){
+		loadDoc(2);
+	});
+	$("#hob3").click(function(){
+		loadDoc(3);
+	});			
 });
