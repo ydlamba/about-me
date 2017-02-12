@@ -97,27 +97,31 @@ $(document).ready(function(){
 	function infoInt(xml,i){
 		var xmlDoc = xml.responseXML;
 		var x = xmlDoc.getElementsByTagName("INTEREST");
-		var info = "<h3>"+x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue+"</h3>"+"<p>"+x[1].getElementsByTagName("INFO")[0].childNodes[0].nodeValue+"</p>";
+		var info = "<h3>"+x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue+"</h3>"+"<p>"+x[i].getElementsByTagName("INFO")[0].childNodes[0].nodeValue+"</p>";
 				
 		document.getElementsByClassName("int_info")[0].innerHTML = info;
+		$(".int_info p,.int_info h3").fadeIn(200);
 	}
 
 	$("#hob0").click(function(){
 		infoAni();
 		loadDoc(0);
+		history.replaceState(data,null,hacking.html);
 	});
 	$("#hob1").click(function(){
+		infoAni();
 		loadDoc(1);
 	});	
 	$("#hob2").click(function(){
+		infoAni();
 		loadDoc(2);
 	});
 	$("#hob3").click(function(){
+		infoAni();
 		loadDoc(3);
 	});
 /*info interests animation*/
 	function infoAni(){
-		$(".info_info").css("height","200px");
+		$(".int_info").animate({height:"auto"},200);
 	}	
-
 });

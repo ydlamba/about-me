@@ -236,13 +236,16 @@ body>section>p{
 	color: #999;
 	background: rgba(0,0,0,0.5);
 	padding: 1.53vw;
-	transition: height 0.3s ease;
+	transition: all 0.3s ease;
+	overflow:hidden;
 	margin-top: 1.53vw;
 }
 .int_info p{
+	display: none;
 	font-size: 16px;
 }
 .int_info h3{
+	display: none;
 	font-weight: 600;
 }
 .work li,.interests li{
