@@ -74,10 +74,10 @@
 			<h2>Interests</h2>
 			<span class="nox">Click on Image to know information about them (Using AJAX).</span>
 			<div class="row hobdiv">
-				<img src="images/interests/hack.jpg" class="hobimg" id="hob0">
-				<img src="images/interests/dance.jpg" class="hobimg" id="hob1">
-				<img src="images/interests/baski.jpg" class="hobimg" id="hob2">
-				<img src="images/interests/judo.jpg" class="hobimg" id="hob3">			
+				<img src="images/interests/hack.jpg" class="hobimg" id="hob0" onclick="loadDoc(0)" data-name="hacking">
+				<img src="images/interests/dance.jpg" class="hobimg" id="hob1" onclick="loadDoc(1)" data-name="dance">
+				<img src="images/interests/baski.jpg" class="hobimg" id="hob2" onclick="loadDoc(2)" data-name="basketball">
+				<img src="images/interests/judo.jpg" class="hobimg" id="hob3" onclick="loadDoc(3)" data-name="judo">			
 			</div>
 			<div class="int_info"></div>
 			<p>
@@ -128,5 +128,81 @@
 		<script type="text/javascript" src="scripts/script.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			var hstack = [];
+			var p=0;
+			var temp,data,index;
+			function loadDoc(i){
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function(){
+					if(this.readyState == 4 && this.status == 200){
+						infoInt(this,i);
+					}
+				};
+				xhttp.open("GET","infoInt.xml",true);
+				xhttp.send();
+			}
+			function infoInt(xml,i){
+				var xmlDoc = xml.responseXML;
+				var x = xmlDoc.getElementsByTagName("INTEREST");
+				var info = "<h3>"+x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue+"</h3>"+"<p>"+x[i].getElementsByTagName("INFO")[0].childNodes[0].nodeValue+"</p>";
+						
+				document.getElementsByClassName("int_info")[0].innerHTML = info;
+				$(".int_info p,.int_info h3").fadeIn(200);
+				infoAni();
+				if(i == 0){					
+					data = "hacking";
+					index = 0;
+					hstack.push(data);
+				}else if(i == 1){
+					data = "dance";
+					index = 1;
+					hstack.push(data);
+				}else if(i == 2){
+					data= "basketball";
+					index = 2;
+					hstack.push(data);
+				}else{
+					data = "judo";
+					index = 3;
+					hstack.push(data);
+				}
+				history.pushState(data,null,data);
+			}
+
+			function infoAni(){
+				$(".int_info").fadeIn(200);
+				$(".int_info").animate({height:"auto"},200);
+			}
+			window.onpopstate = function(e){
+				temp = e.state;
+				if(temp == "hacking"){
+					p=0;
+				}else if(temp == "dance"){
+					p=1;
+				}else if(temp == "basketball"){
+					p=2;
+				}else if(temp == "judo"){
+					p=3;
+				}
+				function changeData(p){
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function(){
+						if(this.readyState == 4 && this.status == 200){
+							var xmlDoc = this.responseXML;
+							var x = xmlDoc.getElementsByTagName("INTEREST");
+							var info = "<h3>"+x[p].getElementsByTagName("NAME")[0].childNodes[0].nodeValue+"</h3>"+"<p>"+x[p].getElementsByTagName("INFO")[0].childNodes[0].nodeValue+"</p>";
+									
+							document.getElementsByClassName("int_info")[0].innerHTML = info;
+							$(".int_info p,.int_info h3").fadeIn(200);
+							infoAni();
+						}
+					};
+					xhttp.open("GET","infoInt.xml",true);
+					xhttp.send();
+				}	
+				changeData(p);		
+			}
+		</script>
 	</body>
-</html>
+</html>s

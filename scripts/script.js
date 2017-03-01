@@ -43,7 +43,6 @@ $(document).ready(function(){
 		$interests.css("transform","scale(5)");
 		$interests.fadeIn(500);
 		$interests.css("transform","scale(1)");
-		history.pushState(null,null,"interests");
 	});
 
 	$(".wor").click(function(){
@@ -85,7 +84,7 @@ $(document).ready(function(){
 
 
 /*ajax requests*/
-	function loadDoc(i){
+	/*function loadDoc(i){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){
@@ -102,31 +101,52 @@ $(document).ready(function(){
 				
 		document.getElementsByClassName("int_info")[0].innerHTML = info;
 		$(".int_info p,.int_info h3").fadeIn(200);
-	}
-
-	$("#hob0").click(function(){
 		infoAni();
+		if(i == 0){
+			history.pushState("hacking",null,"hacking");
+		}else if(i == 1){
+			history.pushState("dance",null,"dance");
+		}else if(i == 2){
+			history.pushState("basketball",null,"basketball");
+		}else{
+			history.pushState("judo",null,"judo");
+		}
+	}
+*/
+	/*$("#hob0").click(function(){
+		
 		loadDoc(0);
-		history.replaceState(null,null,"hacking");
+		history.pushState("hacking",null,"hacking");
 	});
 	$("#hob1").click(function(){
 		infoAni();
 		loadDoc(1);
-		history.replaceState(null,null,"dance");
+		history.pushState("dance",null,"dance");
 	});	
 	$("#hob2").click(function(){
 		infoAni();
 		loadDoc(2);
-		history.replaceState(null,null,"basketball");
+		history.pushState("backetball",null,"basketball");
 	});
 	$("#hob3").click(function(){
 		infoAni();
 		loadDoc(3);
-		history.replaceState(null,null,"judo");
-	});
+		history.pushState("judo",null,"judo");
+	});*/
 /*info interests animation*/
-	function infoAni(){
+	/*function infoAni(){
 		$(".int_info").fadeIn(200);
 		$(".int_info").animate({height:"auto"},200);
-	}	
+	}	*/
+	
+	/*window.addEventListener('popstate',function(e){
+		e.preventDefault(); 
+		var char = e.state;
+		console.log(char);
+	});*/
+/*
+	window.onpopstate = function(i){
+		infoAni();
+		loadDoc(i); 
+	}*/
 });
