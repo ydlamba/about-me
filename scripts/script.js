@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 
 /*ajax requests*/
-	/*function loadDoc(i){
+	function loadDoc(i){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function(){
 			if(this.readyState == 4 && this.status == 200){
@@ -112,8 +112,8 @@ $(document).ready(function(){
 			history.pushState("judo",null,"judo");
 		}
 	}
-*/
-	/*$("#hob0").click(function(){
+
+	$("#hob0").click(function(){
 		
 		loadDoc(0);
 		history.pushState("hacking",null,"hacking");
@@ -132,21 +132,21 @@ $(document).ready(function(){
 		infoAni();
 		loadDoc(3);
 		history.pushState("judo",null,"judo");
-	});*/
+	});
 /*info interests animation*/
-	/*function infoAni(){
+	function infoAni(){
 		$(".int_info").fadeIn(200);
 		$(".int_info").animate({height:"auto"},200);
 	}	*/
 	
-	/*window.addEventListener('popstate',function(e){
+	window.addEventListener('popstate',function(e){
 		e.preventDefault(); 
 		var char = e.state;
 		console.log(char);
-	});*/
-/*
+	});
+
 	window.onpopstate = function(i){
 		infoAni();
 		loadDoc(i); 
-	}*/
+	}
 });
